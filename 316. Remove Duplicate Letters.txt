@@ -1,0 +1,51 @@
+Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
+
+ 
+
+Example 1:
+
+Input: s = "bcabc"
+Output: "abc"
+Example 2:
+
+Input: s = "cbacdcbc"
+Output: "acdb"
+ 
+
+Constraints:
+
+1 <= s.length <= 104
+s consists of lowercase English letters.
+ 
+
+Note: This question is the same as 1081: https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
+
+******************************************************************************************************************************************
+
+ans:
+
+class Solution {
+public:
+    string removeDuplicateLetters(string s) {
+        vector<unsigned int> cnt(26,0);
+        vector<bool>inRes(26,false);
+        
+        for(char ch:s){
+           cnt[ch-'a']++; 
+        }
+        string res="";
+        for(char ch:s){
+            cnt[ch-'a']--;
+            if(inRes[ch-'a'])continue;
+            
+            while(!res.empty() && ch<res.back() && cnt[res.back()-'a'] > 0){
+                inRes[res.back()-'a']=false;
+                res.pop_back();
+            }
+            res.push_back(ch);
+            inRes[ch-'a']=true;
+            
+        }
+        return res;
+    }
+};
