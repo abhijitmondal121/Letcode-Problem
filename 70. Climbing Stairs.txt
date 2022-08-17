@@ -45,6 +45,3 @@ public:
         return arr[n];
     }
 };
-
-
-
