@@ -61,6 +61,8 @@ public:
         vector<int>v(n+1);
         v[0]=1;
         return v;
+
+    
         
         
     }
