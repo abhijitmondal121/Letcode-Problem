@@ -50,3 +50,5 @@ public:
       return top || bot ? min(A.size() - max(top1, bot1), A.size() - max(top2, bot2)) : -1;
     }
 };
+
+
