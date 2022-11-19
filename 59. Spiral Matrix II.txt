@@ -17,6 +17,7 @@ Constraints:
 
 1 <= n <= 20
 
+
 **************************************************************************************************************************************
 
 
@@ -30,7 +31,7 @@ public:
         int rowstart=0,rowend=n-1;
         int colstart=0,colend=n-1;
         int cnt=1;
-        
+
         
         while(rowstart<= rowend && colstart<=colend){
             for(int index=colstart;index<=colend;index++){
