@@ -42,6 +42,7 @@ s only contains lower case English letters
 
 ans:
 
+
 class Solution {
 public:
     int find(vector<int>& ds, int i) {
