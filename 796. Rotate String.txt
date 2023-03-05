@@ -27,8 +27,6 @@ s and goal consist of lowercase English letters.
 
 ans:
 
-
-
 class Solution {
 public:
     bool rotateString(string s, string g) {
