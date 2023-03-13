@@ -6,6 +6,7 @@ In one step, if the current number is even, you have to divide it by 2, otherwis
 
 Example 1:
 
+
 Input: num = 14
 Output: 6
 Explanation: 
